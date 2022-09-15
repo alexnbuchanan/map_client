@@ -15,8 +15,7 @@ import mapboxgl from "!mapbox-gl";
 import { MarkunreadSharp } from "@material-ui/icons";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiYWIyMzk5IiwiYSI6ImNreXJteW1qcTB2ODkyb2pqb2Zmc2NwczYifQ.bjO5HQbavueQzIkdwcbGFg";
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY;
 
 export default function Map(props) {
   const [error, setError] = useState("");
