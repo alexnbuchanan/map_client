@@ -1,0 +1,117 @@
+.host--intro-card{
+    margin-top: 10%;
+}
+
+.host--intro-div {
+    padding: 10px 10px 10px 10px
+}
+
+.host--intro-button-div{
+	height: 12vh;
+	margin: 0 auto;
+
+}
+
+.host--location-card-div {
+padding: 10px 10px 10px 10px
+}
+
+.host--location-input-div {
+    margin: 0 auto,
+    }
+    
+    .host--location-input-inner-div {
+        padding: "50px 0";
+        display: "grid";
+        justify-content: "center";
+        align-items: "center";
+
+}
+
+.host--location-input-field{
+
+        cursor: pointer;
+        max-width: 400px;
+        margin-top: 20px;
+
+
+}
+
+.host--location-input-inner-div{
+      background: #F0F0F0;
+     justify-self: center;
+     width: 360px;
+    padding: 30px 20px 20px 20px;
+      border-radius: 0px 0px 30px 30px;
+     border: none;
+      margin-top: -25px;
+}
+
+.host--description-card-div {
+	padding: 10px 10px 10px 10px
+}
+
+.host--description-title {
+	margin-top: 30px
+}
+
+.host--description-title2 {
+	margin-top: 40px;
+
+}
+
+.host--description-name-input {
+    border-radius: 3px;
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    border: 1px solid #E3E3E3
+}
+
+.host--description-describe-input {
+    width: 70%;
+    padding-bottom: 50px;
+    border: 1px solid #E3E3E3;
+    border-radius: 3px
+}
+
+.host--instruments-top-div {
+	padding: 10px 10px 10px 10px
+}
+
+.host--photos-top-div {
+	padding: 10px 10px 10px 10px
+}
+
+.host--photos-preview-img {
+    width: 100px;
+    height: 100px;
+    object-fit: scale-down;
+    margin-right: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+.host--photos-preview-img2 {
+ height: 200px;
+  margin-top: 20px
+}
+
+.host--photos-submit-label {
+    text-transform: none;
+    background-color: #2a85ff;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 8px 35px 8px 35px;
+}
+
+.host--summary-top-div {
+    padding: 10px 10px 10px 10px
+
+}
+
+.host--summary-photo-div{
+    margin: 20px 20px 20px 20px
+
+}
