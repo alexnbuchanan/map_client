@@ -93,12 +93,14 @@ export default function Map(props) {
         }).on("geolocate", function (position) {
           const lat = position.coords.latitude;
           const lng = position.coords.longitude;
-          dispatch(CURRENT_LOCATION([lng, lat]));
+          //dispatch(CURRENT_LOCATION([lng, lat]));
         })
       )
       .resize();
+    console.log("Current Map listings", props.currentMapListings);
     if (props.currentMapListings) {
       getLatLng();
+      console.log("listings", listings);
     }
     if (props.lngLatHostSummary) {
       let listingLngLat = Object.values(props.lngLatHostSummary);
@@ -187,16 +189,24 @@ export default function Map(props) {
   }, [listings]);
 
   const getLatLng = async () => {
-    try {
-      const { data } = await axios.get(
+    /*const { data } = await axios.get(
         "https://ipgeolocation.abstractapi.com/v1/?api_key=aba91a7ee1144621952e0de32c00f005"
       );
       setLat(data.latitude);
-      setLng(data.longitude);
-      dispatch(CURRENT_LOCATION([data.longitude, data.latitude]));
-    } catch (error) {
-      console.log(error);
-    }
+      setLng(data.longitude);*/
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+
+        dispatch(CURRENT_LOCATION([longitude, latitude]));
+        setLat(latitude);
+        setLng(longitude);
+      },
+      (error) => {
+        console.log("Load Lat Lng error", error);
+      }
+    );
   };
 
   async function handleLogout() {
